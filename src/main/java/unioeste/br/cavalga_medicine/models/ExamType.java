@@ -8,7 +8,6 @@ import lombok.*;
 @Getter @Setter @ToString
 public class ExamType {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String code;
     private String name;
 }

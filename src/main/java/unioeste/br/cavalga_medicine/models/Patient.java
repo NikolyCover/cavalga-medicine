@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor
@@ -23,4 +24,16 @@ public class Patient {
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
+
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    private Set<PatientEmail> patientEmails;
+
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    private Set<PatientPhone> patientPhones;
+
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    private Set<MedicalExam> medicalExams;
+
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+    private Set<MedicalAppointment> medicalAppointments;
 }

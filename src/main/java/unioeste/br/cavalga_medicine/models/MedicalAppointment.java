@@ -1,5 +1,6 @@
 package unioeste.br.cavalga_medicine.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -8,23 +9,23 @@ import java.time.LocalDate;
 @Entity
 @NoArgsConstructor @AllArgsConstructor
 @Getter @Setter @ToString
-public class Exam {
+public class MedicalAppointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate examDate;
-    private String observations;
+    private LocalDate date;
 
     @ManyToOne
-    @JoinColumn(name = "result_id")
-    private ExamResult result;
+    @JoinColumn(name = "diagnosis_id")
+    private Diagnosis diagnosis;
 
     @ManyToOne
-    @JoinColumn(name = "exam_type_id")
-    private ExamType type;
+    @JoinColumn(name = "doctor_id")
+    private Doctor doctor;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
+    @JsonBackReference
     private Patient patient;
 }

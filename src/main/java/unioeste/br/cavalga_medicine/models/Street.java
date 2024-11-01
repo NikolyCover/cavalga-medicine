@@ -14,6 +14,6 @@ public class Street {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "abbreviation")
+    @JoinColumn(name = "street_type_abbreviation")
     private StreetType streetType;
 }
