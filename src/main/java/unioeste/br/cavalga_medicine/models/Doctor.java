@@ -11,5 +11,10 @@ public class Doctor {
     private String crm;
     private String name;
     private String email;
+
+    @Override
+    public String toString() {
+        return String.format("%s, CRM: %s, Contato: %s", name, crm, email );
+    }
 }
 

@@ -3,7 +3,7 @@ package unioeste.br.cavalga_medicine.service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import unioeste.br.cavalga_medicine.models.Patient;
-import unioeste.br.cavalga_medicine.repository.PatientRepository;
+import unioeste.br.cavalga_medicine.repositories.PatientRepository;
 
 @Service
 @AllArgsConstructor

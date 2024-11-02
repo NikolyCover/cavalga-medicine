@@ -19,6 +19,7 @@ public class Patient {
     private String gender;
     private String maritalStatus;
     private String identityDocument;
+    private Integer addressNumber;
     private String addressComplement;
 
     @ManyToOne

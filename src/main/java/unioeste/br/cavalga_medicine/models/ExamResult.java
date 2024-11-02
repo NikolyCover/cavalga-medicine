@@ -12,4 +12,9 @@ public class ExamResult {
     private Long id;
 
     private String result;
+
+    @Override
+    public String toString() {
+        return String.format("%s", result);
+    }
 }

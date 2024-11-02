@@ -24,4 +24,9 @@ public class Address {
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s, %s - %s, %s", street.getName(), neighborhood.getName(), city.getName(), city.getState().getAbbreviation(), zipCode);
+    }
 }

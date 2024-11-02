@@ -10,4 +10,9 @@ public class Diagnosis {
     @Id
     private String code;
     private String description;
+
+    @Override
+    public String toString() {
+        return String.format("%s - %s", code, description );
+    }
 }

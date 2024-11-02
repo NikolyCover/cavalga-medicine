@@ -49,27 +49,32 @@ INSERT INTO ddi (number)
 VALUES ('55');
 INSERT INTO ddd (number)
 VALUES ('11');
+INSERT INTO ddd (number)
+VALUES ('45');
 
-INSERT INTO patient (id, name, birth_date, gender, marital_status, identity_document, address_complement, address_id)
-VALUES (1, 'João Silva', '1980-05-15', 'M', 'Solteiro', '123456789', 'Apto 12', 1),
-       (2, 'Maria Oliveira', '1990-08-22', 'F', 'Casada', '987654321', 'Casa 3', 2),
-       (3, 'Carlos Sousa', '1975-09-30', 'M', 'Divorciado', '456789123', 'Apto 45', 1),
-       (4, 'Ana Paula', '1985-12-10', 'F', 'Solteira', '123123123', 'Casa 10', 2),
-       (5, 'Ricardo Lima', '1992-04-17', 'M', 'Casado', '789789789', 'Apto 67', 1);
+INSERT INTO patient (id, name, birth_date, gender, marital_status, identity_document, address_number, address_complement, address_id)
+VALUES (1, 'João Silva', '1980-05-15', 'M', 'Solteiro', '123456789', 244, 'Apto 12', 1),
+       (2, 'Maria Oliveira', '1990-08-22', 'F', 'Casada', '987654321', 153, 'Casa 3', 2),
+       (3, 'Carlos Sousa', '1975-09-30', 'M', 'Divorciado', '456789123', 241, 'Apto 45', 1),
+       (4, 'Ana Paula', '1985-12-10', 'F', 'Solteira', '123123123', 321, 'Casa 10', 2),
+       (5, 'Ricardo Lima', '1992-04-17', 'M', 'Casado', '789789789', 51, 'Apto 67', 1);
 
 INSERT INTO patient_phone (id, number, ddd_id, ddi_id, patient_id)
 VALUES (1, '912345678', '11', '55', 1),
-       (2, '923456789', '11', '55', 2),
-       (3, '934567890', '11', '55', 3),
-       (4, '945678901', '11', '55', 4),
-       (5, '956789012', '11', '55', 5);
+       (2, '920004455', '45', '55', 1),
+       (3, '988445533', '45', '55', 1),
+       (4, '923456789', '11', '55', 2),
+       (5, '934567890', '11', '55', 3),
+       (6, '945678901', '11', '55', 4),
+       (7, '956789012', '11', '55', 5);
 
 INSERT INTO patient_email (id, email_address, patient_id)
 VALUES (1, 'joao.silva@example.com', 1),
-       (2, 'maria.oliveira@example.com', 2),
-       (3, 'carlos.sousa@example.com', 3),
-       (4, 'ana.paula@example.com', 4),
-       (5, 'ricardo.lima@example.com', 5);
+       (2, 'joao123.silva@lorem.com', 1),
+       (3, 'maria.oliveira@example.com', 2),
+       (4, 'carlos.sousa@example.com', 3),
+       (5, 'ana.paula@example.com', 4),
+       (6, 'ricardo.lima@example.com', 5);
 
 INSERT INTO doctor (crm, name, email)
 VALUES ('12345-SP', 'Dr. Pedro Mendes', 'dr.pedro@example.com'),
