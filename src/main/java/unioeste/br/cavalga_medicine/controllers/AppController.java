@@ -14,6 +14,8 @@ public class AppController {
     @Autowired
     private PatientController patientController;
 
+    @Autowired
+    private RelationalAlgebraController relationalAlgebraController;
 
     public void start(){
         appView.showMenu();
@@ -23,6 +25,10 @@ public class AppController {
         switch (option){
             case 0 -> System.exit(0);
             case 1 -> patientController.handleGetPatientById();
+            case 2 -> relationalAlgebraController.handlePatientAndMedicalExamsCartesianProduct();
+            case 3 -> relationalAlgebraController.handlePatientsFromAppointmentsAndExams();
+            case 4 -> relationalAlgebraController.handlePatientsFromAppointmentsAndNotExams();
+            case 5 -> relationalAlgebraController.handlePatientsAndMedicalExams();
             default -> start();
         }
 

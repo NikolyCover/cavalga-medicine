@@ -12,7 +12,7 @@ import java.util.Set;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long patient_id;
 
     private String name;
     private LocalDate birthDate;

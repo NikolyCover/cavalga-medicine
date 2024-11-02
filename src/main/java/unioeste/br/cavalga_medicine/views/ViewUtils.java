@@ -30,6 +30,7 @@ public class ViewUtils {
 
     protected void showMenu(String... options){
         AsciiTable menu = new AsciiTable();
+        menu.getContext().setWidth(150);
 
         menu.addRule();
 
@@ -42,20 +43,21 @@ public class ViewUtils {
     }
 
     protected <T> void showTable(List<String> headers, List<T> data, Function<T, List<String>> rowRenderer) {
-        AsciiTable menu = new AsciiTable();
+        AsciiTable table = new AsciiTable();
 
-        menu.addRule();
-        menu.addRow(headers.toArray());
-        menu.addRule();
+        table.addRule();
+        table.addRow(headers.toArray());
+        table.addRule();
+        table.getContext().setWidth(150);
 
         for (T item : data) {
             List<String> row = (List<String>) rowRenderer.apply(item);
 
-            menu.addRow(row.toArray());
-            menu.addRule();
+            table.addRow(row.toArray());
+            table.addRule();
         }
 
-        System.out.println(menu.render());
+        System.out.println(table.render());
     }
 
     public void showMessage(String message){

@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import unioeste.br.cavalga_medicine.models.Patient;
 import unioeste.br.cavalga_medicine.repositories.PatientRepository;
 
+import java.util.List;
+import java.util.Objects;
+
 @Service
 @AllArgsConstructor
 public class PatientService {

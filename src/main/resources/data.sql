@@ -52,12 +52,14 @@ VALUES ('11');
 INSERT INTO ddd (number)
 VALUES ('45');
 
-INSERT INTO patient (id, name, birth_date, gender, marital_status, identity_document, address_number, address_complement, address_id)
+INSERT INTO patient (patient_id, name, birth_date, gender, marital_status, identity_document, address_number, address_complement, address_id)
 VALUES (1, 'João Silva', '1980-05-15', 'M', 'Solteiro', '123456789', 244, 'Apto 12', 1),
        (2, 'Maria Oliveira', '1990-08-22', 'F', 'Casada', '987654321', 153, 'Casa 3', 2),
        (3, 'Carlos Sousa', '1975-09-30', 'M', 'Divorciado', '456789123', 241, 'Apto 45', 1),
        (4, 'Ana Paula', '1985-12-10', 'F', 'Solteira', '123123123', 321, 'Casa 10', 2),
-       (5, 'Ricardo Lima', '1992-04-17', 'M', 'Casado', '789789789', 51, 'Apto 67', 1);
+       (5, 'Ricardo Lima', '1992-04-17', 'M', 'Casado', '789789789', 51, 'Apto 67', 1),
+       (6, 'John Doe', '2004-1-22', 'M', 'Casado', '789789789', 319, 'Apto 3', 1),
+       (7, 'D Lorean Ipsum', '200-06-12', 'M', 'Casado', '789789789', 115, 'Apto 7', 1);
 
 INSERT INTO patient_phone (id, number, ddd_id, ddi_id, patient_id)
 VALUES (1, '912345678', '11', '55', 1),
@@ -113,7 +115,8 @@ VALUES (1, '2024-01-15', 'A01', '12345-SP', 1),
        (12, '2024-03-20', 'C03', '11223-SP', 4),
        (13, '2024-01-30', 'A01', '67890-SP', 5),
        (14, '2024-02-25', 'B02', '11223-SP', 5),
-       (15, '2024-03-25', 'C03', '12345-SP', 5);
+       (15, '2024-03-25', 'C03', '12345-SP', 5),
+       (16, '2024-05-28', 'C03', '12345-SP', 6);
 
 INSERT INTO medical_exam (id, date, observations, result_id, exam_type_id, patient_id)
 VALUES (1, '2024-01-16', 'Observação 1', 1, 'E01', 1),

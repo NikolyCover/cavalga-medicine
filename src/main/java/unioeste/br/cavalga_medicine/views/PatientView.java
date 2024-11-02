@@ -10,7 +10,7 @@ public class PatientView  extends ViewUtils {
         AsciiTable table = new AsciiTable();
 
         table.addRule();
-        table.addRow("Nro Paciente", patient.getId());
+        table.addRow("Nro Paciente", patient.getPatient_id());
         table.addRule();
         table.addRow("Nome", patient.getName());
         table.addRule();

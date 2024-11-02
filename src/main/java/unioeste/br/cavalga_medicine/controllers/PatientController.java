@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import unioeste.br.cavalga_medicine.models.MedicalExam;
 import unioeste.br.cavalga_medicine.models.Patient;
 import unioeste.br.cavalga_medicine.service.PatientService;
 import unioeste.br.cavalga_medicine.views.*;
